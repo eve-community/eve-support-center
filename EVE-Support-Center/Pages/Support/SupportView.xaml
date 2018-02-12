@@ -1,0 +1,42 @@
+﻿<UserControl
+	x:Class="EVE_Support_Center.Pages.Support.SupportView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="using:EVE_Support_Center.Pages.Support"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DesignHeight="300"
+	d:DesignWidth="400"
+	mc:Ignorable="d">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../Resources/GeneralStyles.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<StackPanel Orientation="Vertical">
+		<TextBlock Style="{StaticResource GroupHeaderStyle}" Text="support and contact" />
+		<TextBlock Style="{StaticResource GroupSubHeaderStyle}" Text="Need help with Windows, Software or Periphery? Ask the community for help!" />
+		<HyperlinkButton
+			Content="join community now!"
+			NavigateUri="https://eve.community/"
+			Style="{StaticResource BigHyperlinkButtonStyle}">
+			<HyperlinkButton.Background>
+				<ImageBrush ImageSource="/Resources/Images/community-power.png" Stretch="UniformToFill" />
+			</HyperlinkButton.Background>
+		</HyperlinkButton>
+
+		<TextBlock Style="{StaticResource GroupSubHeaderStyle}" Text="You have problems with the hardware, drivers or delivery? Contact EVE Support!" />
+		<HyperlinkButton
+			Content="contact support!"
+			NavigateUri="https://eve-tech.com/pages/support/"
+			Style="{StaticResource BigHyperlinkButtonStyle}">
+			<HyperlinkButton.Background>
+				<ImageBrush ImageSource="/Resources/Images/contact-eve.png" Stretch="UniformToFill" />
+			</HyperlinkButton.Background>
+		</HyperlinkButton>
+	</StackPanel>
+</UserControl>

@@ -1,0 +1,87 @@
+﻿<Page
+	x:Class="EVE_Support_Center.MainPage"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:aboutControl="using:EVE_Support_Center.Pages.About"
+	xmlns:backupControl="using:EVE_Support_Center.Pages.Backup"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:keyboardControl="using:EVE_Support_Center.Pages.Keyboard"
+	xmlns:local="using:EVE_Support_Center"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:supportControl="using:EVE_Support_Center.Pages.Support"
+	mc:Ignorable="d">
+
+	<Page.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="Resources/GeneralStyles.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</Page.Resources>
+
+	<Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+		<Grid.RowDefinitions>
+			<RowDefinition Height="64" />
+			<RowDefinition Height="1*" />
+		</Grid.RowDefinitions>
+
+		<Grid Background="#ff4a3b">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="1*" />
+				<ColumnDefinition Width="1*" />
+			</Grid.ColumnDefinitions>
+
+			<TextBlock
+				Margin="32,8"
+				VerticalAlignment="Center"
+				FontFamily="Segoe UI Light"
+				FontSize="20"
+				Foreground="White"
+				Text="EVE SUPPORT CENTER" />
+
+			<StackPanel
+				Grid.Column="1"
+				FlowDirection="RightToLeft"
+				Orientation="Horizontal">
+				<HyperlinkButton
+					Width="128"
+					Background="#0C0C0C"
+					NavigateUri="https://eve-tech.com/">
+					<HyperlinkButton.Content>
+						<Image Margin="16" Source="Assets/eve-logo-white.png" />
+					</HyperlinkButton.Content>
+				</HyperlinkButton>
+			</StackPanel>
+
+		</Grid>
+
+		<Pivot Grid.Row="1">
+			<Pivot.Items>
+				<PivotItem Header="start">
+					hi
+				</PivotItem>
+				<PivotItem Header="my V">
+					<keyboardControl:KeyboardView />
+				</PivotItem>
+				<PivotItem Header="backup">
+					<backupControl:BackupColorCalibrationView />
+				</PivotItem>
+				<PivotItem Header="keyboard">
+					<keyboardControl:KeyboardView />
+				</PivotItem>
+				<PivotItem Header="pen">
+					pen
+				</PivotItem>
+				<PivotItem Header="updates">
+					updates
+				</PivotItem>
+				<PivotItem Header="support">
+					<supportControl:SupportView />
+				</PivotItem>
+				<PivotItem Header="about">
+					<aboutControl:AboutView />
+				</PivotItem>
+			</Pivot.Items>
+		</Pivot>
+	</Grid>
+</Page>

@@ -1,0 +1,64 @@
+﻿<ResourceDictionary
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:local="using:EVE_Support_Center.Resources">
+
+	<SolidColorBrush x:Key="DefaultForeground" Color="#0C0C0C" />
+	<SolidColorBrush x:Key="AlternateForeground" Color="#AAAAAA" />
+	<SolidColorBrush x:Key="DefaultHighlight" Color="#ff4a3b" />
+	<SolidColorBrush x:Key="DefaultBackground" Color="#FFFFFF" />
+	<SolidColorBrush x:Key="DefaultControl" Color="#DDDDDD" />
+
+	<Style x:Key="GroupHeaderStyle" TargetType="TextBlock">
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Margin" Value="8" />
+		<Setter Property="Foreground" Value="{StaticResource AlternateForeground}" />
+		<Setter Property="FontFamily" Value="Segoe UI Light" />
+		<Setter Property="FontSize" Value="36" />
+		<Setter Property="FontWeight" Value="Light" />
+	</Style>
+
+	<Style x:Key="GroupSubHeaderStyle" TargetType="TextBlock">
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Margin" Value="8" />
+		<Setter Property="Foreground" Value="{StaticResource DefaultForeground}" />
+		<Setter Property="FontFamily" Value="Segoe UI Light" />
+		<Setter Property="FontSize" Value="18" />
+		<Setter Property="FontWeight" Value="Light" />
+	</Style>
+
+	<Style x:Key="StackButtonStyle" TargetType="Button">
+		<Setter Property="Foreground" Value="{StaticResource DefaultForeground}" />
+		<Setter Property="VerticalAlignment" Value="Center" />
+		<Setter Property="Height" Value="96" />
+		<Setter Property="Width" Value="128" />
+		<Setter Property="Margin" Value="8" />
+		<Setter Property="VerticalContentAlignment" Value="Bottom" />
+		<Setter Property="HorizontalContentAlignment" Value="Left" />
+	</Style>
+
+	<Style x:Key="BigHyperlinkButtonStyle" TargetType="HyperlinkButton">
+		<Setter Property="HorizontalAlignment" Value="Stretch" />
+		<Setter Property="Height" Value="128" />
+		<Setter Property="Foreground" Value="{StaticResource DefaultBackground}" />
+		<Setter Property="Template">
+			<Setter.Value>
+				<ControlTemplate TargetType="HyperlinkButton">
+					<Grid Margin="8" Background="{TemplateBinding Background}">
+						<Border
+							Width="196"
+							Padding="12"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Background="{StaticResource DefaultHighlight}"
+							BorderBrush="Transparent"
+							BorderThickness="0">
+							<ContentPresenter HorizontalAlignment="Center" Content="{TemplateBinding Content}" />
+						</Border>
+					</Grid>
+
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>
