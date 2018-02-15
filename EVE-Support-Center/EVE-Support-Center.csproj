@@ -99,6 +99,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Helper\SystemInformationProvider.cs" />
     <Compile Include="Helper\ViewModelBase.cs" />
     <Compile Include="MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
@@ -115,6 +116,10 @@
       <DependentUpon>KeyboardView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Keyboard\KeyboardViewModel.cs" />
+    <Compile Include="Pages\MyV\MyVView.xaml.cs">
+      <DependentUpon>MyVView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\MyV\MyVViewModel.cs" />
     <Compile Include="Pages\Support\SupportView.xaml.cs">
       <DependentUpon>SupportView.xaml</DependentUpon>
     </Compile>
@@ -161,6 +166,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Pages\Keyboard\KeyboardView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\MyV\MyVView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

@@ -1,0 +1,64 @@
+﻿<UserControl
+	x:Class="EVE_Support_Center.Pages.Backup.BackupColorCalibrationView"
+	xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+	xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+	xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+	xmlns:local="using:EVE_Support_Center.Pages.Backup"
+	xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	d:DesignHeight="300"
+	d:DesignWidth="400"
+	mc:Ignorable="d">
+
+	<UserControl.Resources>
+		<ResourceDictionary>
+			<ResourceDictionary.MergedDictionaries>
+				<ResourceDictionary Source="../../Resources/GeneralStyles.xaml" />
+			</ResourceDictionary.MergedDictionaries>
+		</ResourceDictionary>
+	</UserControl.Resources>
+
+	<Grid>
+		<Grid.RowDefinitions>
+			<RowDefinition Height="48" />
+			<RowDefinition Height="128" />
+			<RowDefinition Height="1*" />
+		</Grid.RowDefinitions>
+
+		<TextBlock
+			Grid.Row="0"
+			Style="{StaticResource GroupHeaderStyle}"
+			Text="Backup your Color Calibration" />
+
+		<StackPanel
+			Grid.Row="1"
+			Height="128"
+			FlowDirection="LeftToRight"
+			Orientation="Horizontal">
+			<Button Style="{StaticResource StackButtonStyle}">
+				<StackPanel>
+					<TextBlock
+						VerticalAlignment="Bottom"
+						Text="Open Folder"
+						TextWrapping="Wrap" />
+				</StackPanel>
+			</Button>
+			<Button Style="{StaticResource StackButtonStyle}">
+				<StackPanel>
+					<TextBlock
+						VerticalAlignment="Bottom"
+						Text="Save to Folder"
+						TextWrapping="Wrap" />
+				</StackPanel>
+			</Button>
+			<Button Style="{StaticResource StackButtonStyle}">
+				<StackPanel>
+					<TextBlock
+						VerticalAlignment="Bottom"
+						Text="Save to OneDrive"
+						TextWrapping="Wrap" />
+				</StackPanel>
+			</Button>
+		</StackPanel>
+
+	</Grid>
+</UserControl>
